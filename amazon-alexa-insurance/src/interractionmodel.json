@@ -1,0 +1,430 @@
+{
+  "intents": [
+    {
+      "name": "Address",
+      "samples": [
+        "My address is {addr} ",
+        "I live on {addr}"
+      ],
+      "slots": [
+        {
+          "name": "addr",
+          "type": "AMAZON.PostalAddress",
+          "samples": []
+        }
+      ]
+    },
+    {
+      "name": "AMAZON.CancelIntent",
+      "samples": []
+    },
+    {
+      "name": "AMAZON.HelpIntent",
+      "samples": []
+    },
+    {
+      "name": "AMAZON.StopIntent",
+      "samples": []
+    },
+    {
+      "name": "Appointment",
+      "samples": [
+        "I would like to make an appointment for {appt} "
+      ],
+      "slots": [
+        {
+          "name": "appt",
+          "type": "AMAZON.DATE",
+          "samples": []
+        }
+      ]
+    },
+    {
+      "name": "Birthdate",
+      "samples": [
+        "My birthdate is {day}",
+        "My birthday is {day}",
+        "My date of birth is {day} "
+      ],
+      "slots": [
+        {
+          "name": "day",
+          "type": "AMAZON.DATE",
+          "samples": []
+        }
+      ]
+    },
+    {
+      "name": "Claim",
+      "samples": [
+        "I would like to make a {type} claim"
+      ],
+      "slots": [
+        {
+          "name": "type",
+          "type": "TypesofClaims",
+          "samples": []
+        }
+      ]
+    },
+    {
+      "name": "Contact",
+      "samples": [
+        "Contact"
+      ],
+      "slots": []
+    },
+    {
+      "name": "DOBChecker",
+      "samples": [
+        "I was born on {bday}"
+      ],
+      "slots": [
+        {
+          "name": "bday",
+          "type": "AMAZON.DATE",
+          "samples": []
+        }
+      ]
+    },
+    {
+      "name": "LicenseNum",
+      "samples": [
+        "My License Number is {licnum}"
+      ],
+      "slots": [
+        {
+          "name": "licnum",
+          "type": "AMAZON.NUMBER",
+          "samples": []
+        }
+      ]
+    },
+    {
+      "name": "Name",
+      "samples": [
+        "My name is {username} "
+      ],
+      "slots": [
+        {
+          "name": "username",
+          "type": "AMAZON.US_FIRST_NAME",
+          "samples": []
+        }
+      ]
+    },
+    {
+      "name": "NameChecker",
+      "samples": [
+        "My User ID is {idname}"
+      ],
+      "slots": [
+        {
+          "name": "idname",
+          "type": "AMAZON.US_FIRST_NAME",
+          "samples": []
+        }
+      ]
+    },
+    {
+      "name": "NewUser",
+      "samples": [
+        "New",
+        "New User",
+        "I am a New User",
+        "Neew",
+        "Noo"
+      ],
+      "slots": []
+    },
+    {
+      "name": "PolicyChecker",
+      "samples": [
+        "My policy id is {polnum}"
+      ],
+      "slots": [
+        {
+          "name": "polnum",
+          "type": "AMAZON.FOUR_DIGIT_NUMBER",
+          "samples": []
+        }
+      ]
+    },
+    {
+      "name": "PolicyNumber",
+      "samples": [
+        "My Policy Number is {policynum}"
+      ],
+      "slots": [
+        {
+          "name": "policynum",
+          "type": "AMAZON.NUMBER",
+          "samples": []
+        }
+      ]
+    },
+    {
+      "name": "QuestionChecker",
+      "samples": [
+        "My answer is {answer}"
+      ],
+      "slots": [
+        {
+          "name": "answer",
+          "type": "AMAZON.Animal",
+          "samples": []
+        }
+      ]
+    },
+    {
+      "name": "ReturningUser",
+      "samples": [
+        "Returning",
+        "Returning User",
+        "I am a Returning User"
+      ],
+      "slots": []
+    },
+    {
+      "name": "SecurityQuestion",
+      "samples": [
+        "My favorite animal is a {animal} "
+      ],
+      "slots": [
+        {
+          "name": "animal",
+          "type": "AMAZON.Animal",
+          "samples": []
+        }
+      ]
+    }
+  ],
+  "types": [
+    {
+      "name": "TypesofClaims",
+      "values": [
+        {
+          "name": {
+            "value": "Home"
+          }
+        },
+        {
+          "name": {
+            "value": "Auto"
+          }
+        },
+        {
+          "name": {
+            "value": "Life"
+          }
+        }
+      ]
+    }
+  ],
+  "prompts": [
+    {
+      "id": "Elicit.Intent-Name.IntentSlot-username",
+      "promptVersion": "1.0",
+      "definitionVersion": "1.0",
+      "variations": [
+        {
+          "type": "PlainText",
+          "value": "What is your name?"
+        }
+      ]
+    }
+  ],
+  "dialog": {
+    "version": "1.0",
+    "intents": [
+      {
+        "name": "Address",
+        "confirmationRequired": false,
+        "prompts": {},
+        "slots": [
+          {
+            "name": "addr",
+            "type": "AMAZON.PostalAddress",
+            "elicitationRequired": false,
+            "confirmationRequired": false,
+            "prompts": {}
+          }
+        ]
+      },
+      {
+        "name": "Appointment",
+        "confirmationRequired": false,
+        "prompts": {},
+        "slots": [
+          {
+            "name": "appt",
+            "type": "AMAZON.DATE",
+            "elicitationRequired": false,
+            "confirmationRequired": false,
+            "prompts": {}
+          }
+        ]
+      },
+      {
+        "name": "Birthdate",
+        "confirmationRequired": false,
+        "prompts": {},
+        "slots": [
+          {
+            "name": "day",
+            "type": "AMAZON.DATE",
+            "elicitationRequired": false,
+            "confirmationRequired": false,
+            "prompts": {}
+          }
+        ]
+      },
+      {
+        "name": "Claim",
+        "confirmationRequired": false,
+        "prompts": {},
+        "slots": [
+          {
+            "name": "type",
+            "type": "TypesofClaims",
+            "elicitationRequired": false,
+            "confirmationRequired": false,
+            "prompts": {}
+          }
+        ]
+      },
+      {
+        "name": "Contact",
+        "confirmationRequired": false,
+        "prompts": {},
+        "slots": []
+      },
+      {
+        "name": "DOBChecker",
+        "confirmationRequired": false,
+        "prompts": {},
+        "slots": [
+          {
+            "name": "bday",
+            "type": "AMAZON.DATE",
+            "elicitationRequired": false,
+            "confirmationRequired": false,
+            "prompts": {}
+          }
+        ]
+      },
+      {
+        "name": "LicenseNum",
+        "confirmationRequired": false,
+        "prompts": {},
+        "slots": [
+          {
+            "name": "licnum",
+            "type": "AMAZON.NUMBER",
+            "elicitationRequired": false,
+            "confirmationRequired": false,
+            "prompts": {}
+          }
+        ]
+      },
+      {
+        "name": "Name",
+        "confirmationRequired": false,
+        "prompts": {},
+        "slots": [
+          {
+            "name": "username",
+            "type": "AMAZON.US_FIRST_NAME",
+            "elicitationRequired": true,
+            "confirmationRequired": false,
+            "prompts": {
+              "elicit": "Elicit.Intent-Name.IntentSlot-username"
+            }
+          }
+        ]
+      },
+      {
+        "name": "NameChecker",
+        "confirmationRequired": false,
+        "prompts": {},
+        "slots": [
+          {
+            "name": "idname",
+            "type": "AMAZON.US_FIRST_NAME",
+            "elicitationRequired": false,
+            "confirmationRequired": false,
+            "prompts": {}
+          }
+        ]
+      },
+      {
+        "name": "NewUser",
+        "confirmationRequired": false,
+        "prompts": {},
+        "slots": []
+      },
+      {
+        "name": "PolicyChecker",
+        "confirmationRequired": false,
+        "prompts": {},
+        "slots": [
+          {
+            "name": "polnum",
+            "type": "AMAZON.FOUR_DIGIT_NUMBER",
+            "elicitationRequired": false,
+            "confirmationRequired": false,
+            "prompts": {}
+          }
+        ]
+      },
+      {
+        "name": "PolicyNumber",
+        "confirmationRequired": false,
+        "prompts": {},
+        "slots": [
+          {
+            "name": "policynum",
+            "type": "AMAZON.NUMBER",
+            "elicitationRequired": false,
+            "confirmationRequired": false,
+            "prompts": {}
+          }
+        ]
+      },
+      {
+        "name": "QuestionChecker",
+        "confirmationRequired": false,
+        "prompts": {},
+        "slots": [
+          {
+            "name": "answer",
+            "type": "AMAZON.Animal",
+            "elicitationRequired": false,
+            "confirmationRequired": false,
+            "prompts": {}
+          }
+        ]
+      },
+      {
+        "name": "ReturningUser",
+        "confirmationRequired": false,
+        "prompts": {},
+        "slots": []
+      },
+      {
+        "name": "SecurityQuestion",
+        "confirmationRequired": false,
+        "prompts": {},
+        "slots": [
+          {
+            "name": "animal",
+            "type": "AMAZON.Animal",
+            "elicitationRequired": false,
+            "confirmationRequired": false,
+            "prompts": {}
+          }
+        ]
+      }
+    ]
+  }
+}
